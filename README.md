@@ -13,13 +13,13 @@ This project provides a Docker-based tool that generates an autoinstall Ubuntu I
 
 2. **Run the Docker Container**
 
-```bash
-docker run --rm \
-  -v /absolute/path/to/ubuntu.iso:/work/ubuntu.iso \
-  -v /absolute/path/to/user-config.yaml:/work/user-config.yaml \
-  -v /absolute/path/to/output:/work/output \
-  afaifai/ubuntu-autoinstall:latest
-```
+    ```bash
+    docker run --rm \
+    -v /absolute/path/to/ubuntu.iso:/work/ubuntu.iso \
+    -v /absolute/path/to/user-config.yaml:/work/user-config.yaml \
+    -v /absolute/path/to/output:/work/output \
+    afaifai/ubuntu-autoinstall:latest
+    ```
 
 ### Note: This tool has been tested and works with:
 - Ubuntu 24.04.2 LTS Server
