@@ -15,9 +15,9 @@ This project provides a Docker-based tool that generates an autoinstall Ubuntu I
 
     ```bash
     docker run --rm \
-    -v /absolute/path/to/ubuntu.iso:/work/ubuntu.iso \
-    -v /absolute/path/to/user-config.yaml:/work/user-config.yaml \
-    -v /absolute/path/to/output:/work/output \
+    -v /path/to/ubuntu.iso:/work/ubuntu.iso \
+    -v /path/to/user-config.yaml:/work/user-config.yaml \
+    -v ./output:/work/output \
     afaifai/ubuntu-autoinstall:latest
     ```
 
