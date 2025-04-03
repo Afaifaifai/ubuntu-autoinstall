@@ -1,0 +1,35 @@
+autoinstall:
+  identity:
+    hostname: afaifai-vm # The hostname for the system
+    password: $6$byZTkqz.N4nIgWV.$6Tqk60rJq7l7W6bBuYD2LARljMgsNVpXWptldoiv0nCLNK3XY89aBHMRSxNS.ObbzfvexlDfK6DAa9e9QoIeK1 # Password hashed using SHA-512
+    realname: af  # Real name of the user
+    username: afaifai # Username for the primary account
+  kernel:
+    package: linux-generic
+  keyboard:
+    layout: us # Set the keyboard layout to US
+    toggle: null
+    variant: ''
+  locale: en_US.UTF-8
+  network: # Network configuration
+    version: 2
+    ethernets:
+      nic0:
+        match:
+          name: e*
+        dhcp4: false
+        addresses:
+          - 172.24.16.51/24
+        routes:
+          - to: default
+            via: 172.24.16.1
+        nameservers:
+          addresses:
+            - 9.9.9.9
+            - 8.8.8.8
+  ssh:
+    allow-pw: true # Allow password authentication for SSH
+    install-server: true # Install the SSH server package
+  updates: security
+  version: 1
+  reboot: reboot
